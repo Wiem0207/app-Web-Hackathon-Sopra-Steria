@@ -1,0 +1,19 @@
+{
+  "name": "projet_hackaton2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "fullcalendar": "^6.1.15",
+    "projet_hackaton2": "file:",
+    "vue-full-calendar": "^0.0.3"
+  },
+  "keywords": [],
+  "description": ""
+}

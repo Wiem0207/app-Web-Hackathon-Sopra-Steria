@@ -1,0 +1,208 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+body {
+  background-image: url(/Images/10026.jpg);
+  background-size: cover; /* Fait en sorte que l'image couvre tout l'élément */
+  background-position: center; /* Centre l'image */
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  background-color: bisque;
+}
+.container {
+  position: absolute;
+  top: 25%;
+  left: 30%;
+  width: 700px;
+  height: 420px;
+  background-color: rgb(202, 181, 127);
+  align-items: center;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.container::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 700px;
+  height: 420px;
+  background: linear-gradient(0deg, transparent, #2d161d, #2d161d);
+  transform-origin: bottom right;
+  animation: animate 7s linear infinite;
+}
+.container::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 700px;
+  height: 420px;
+  background: linear-gradient(0deg, transparent, #ab6cbb, #ab6cbb);
+  transform-origin: bottom right;
+  animation: animate 7s linear infinite;
+  animation-delay: 3s;
+}
+@keyframes animate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.login_container {
+  position: absolute;
+  inset: 3px;
+  border-radius: 8px;
+  background-color: bisque;
+  z-index: 10;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.logo {
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  width: 100px;
+  height: auto;
+  transform: translateY(-20px);
+  animation: fadeIn 2s forwards;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.login_container identify {
+  text-align: center;
+  letter-spacing: 0.1cm;
+  font-size: 30px;
+  color: #2a0f0f;
+}
+
+.inputbox {
+  padding-left: 155px;
+  position: relative;
+  width: 500px;
+  margin-top: 35px;
+}
+.inputbox input,
+button {
+  text-align: center;
+  width: 100%;
+  padding: 20px 10px 10px;
+  background: transparent;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  font-size: 16px;
+  outline: none;
+  border-color: #2a0f0f;
+  color: #2a0f0f;
+}
+
+.inputbox button[type="submit"] {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  border: 1px solid #fff;
+  background-color: #7a3333;
+  color: white;
+  cursor: pointer;
+  margin-top: 5px;
+
+  border-radius: 5px;
+  border-color: #7a3333;
+}
+
+.inputbox button[type="submit"]:hover {
+  background-color: #7c251c;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+/* Media query pour les écrans de moins de 768px */
+@media screen and (max-width: 300px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+  }
+
+  .container {
+    top: 10%;
+    left: 5%;
+    width: 90%; /* Adapte la largeur à 90% pour que le conteneur s'ajuste à la taille de l'écran */
+    height: auto; /* Pour s'adapter à la hauteur variable du contenu */
+    padding: 20px; /* Ajoute un peu de padding pour que le contenu ne soit pas collé aux bords */
+  }
+
+  .login_container {
+    padding: 20px 10px; /* Réduit le padding pour s'adapter à l'écran mobile */
+  }
+
+  .inputbox {
+    padding-left: 0;
+    width: 100%; /* Adapte la largeur de l'input pour occuper tout l'espace */
+    margin-top: 15px;
+  }
+
+  .logo {
+    position: fix;
+    top: 0;
+    left: 0;
+    width: 80px; /* Réduit la taille du logo pour qu'il s'adapte à un écran mobile */
+  }
+
+  .login_container identify {
+    font-size: 24px; /* Réduit la taille de la police pour qu'elle soit plus lisible sur mobile */
+  }
+
+  .inputbox input,
+  button {
+    padding: 10px 5px; /* Réduit le padding pour que les éléments ne soient pas trop grands sur mobile */
+    font-size: 14px; /* Adapte la taille du texte pour mobile */
+  }
+
+  .inputbox button[type="submit"] {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+}
+
+/* Media query pour les très petits écrans (moins de 480px) */
+@media screen and (max-width: 480px) {
+  .container {
+    width: 100%; /* Le conteneur prend toute la largeur disponible */
+    height: auto;
+  }
+
+  .inputbox {
+    width: 100%; /* Inputs prennent toute la largeur */
+  }
+
+  .logo {
+    width: 60px; /* Réduction supplémentaire de la taille du logo */
+  }
+
+  .login_container identify {
+    font-size: 20px;
+  }
+
+  .inputbox input,
+  button {
+    padding: 8px 5px; /* Réduction encore plus importante pour les très petits écrans */
+    font-size: 12px;
+  }
+}

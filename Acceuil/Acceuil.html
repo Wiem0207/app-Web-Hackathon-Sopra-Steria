@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="config.js" defer></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.6/main.min.js' defer></script>
+    <title>Immo Link</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="/Images/Image1.png">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../Evenement/Evenement.html">Événements</a></li>
+                <li><a href="../Securite/Securite.html">Sécurité</a></li>
+                <li><a href="../Annonces/Annonces.html">Annonces</a></li>
+            </ul>
+        </nav>
+        <div class="parametre">
+            <button id="paramButton">
+                Plus
+            </button>
+            <div id="sidebar" class="sidebar">
+                <ul>
+                    <li>Paramètres</li>
+                    <li>Compte</li>
+                    <li>Abonnements</li>
+                    <li>
+                        <a href="../login/login.html">deconnexion</a>
+                    </li>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="banniere" id="banniere">
+            <div class="contenu">
+
+                <div class="bienvenue">Bienvenue , <span class="afficher_nom" id="afficher_nom"></span></div>
+                <div class="appart">Numero d'appartement : 2B354</div><br>
+        </section>
+        <div class="humeur">Mon humeur du jour</div>
+        <ul class="emoji-list">
+            <li class="emoji-item" onclick="showMessage('Quand la vie te sourit, souris-lui en retour !', this)">
+                &#128522;
+            </li>
+            <li class="emoji-item"
+                onclick="showMessage('Quand tu réalises que le week-end est juste au coin de la rue !', this)">
+                &#128528;
+            </li>
+            <li class="emoji-item"
+                onclick="showMessage('Cette sensation quand tu es en retard, mais que tu arrives juste à temps !', this)">
+                &#x1F614;
+            </li>
+        </ul>
+        <div class="message" id="emojiMessage"></div>
+        </div>
+        <section class="calendar" id="calendar">
+            <div class="semaine">Événements de semaine</div>
+            <div class="table1">
+                <table>
+                    <tr>
+                        <th>Lundi</th>
+                        <th>Mardi</th>
+                        <th>Mercredi</th>
+                        <th>Jeudi</th>
+                        <th>Vendredi</th>
+                        <th>Samedi</th>
+                        <th>Dimanche</th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Collecte poubelle à 18:00</td>
+                        <td>Collecte colis à 18:00</td>
+                        <td></td>
+                        <td></td>
+                        <td>Jogging Ensemble! à 09:00</td>
+                        <td>Jeux de Société à 14:00</td>
+                    </tr>
+                    <tr>
+                        <td id="lundi"></td>
+                        <td id="mardi"></td>
+                        <td id="mercredi"></td>
+                        <td id="jeudi"></td>
+                        <td id="vendredi"></td>
+                        <td id="samedi"></td>
+                        <td id="dimanche"></td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        🌆Immo link@inc
+    </footer>
+</body>
+
+</html>

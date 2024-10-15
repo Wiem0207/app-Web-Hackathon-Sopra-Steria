@@ -1,0 +1,320 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  box-sizing: border-box;
+}
+.logo img {
+  height: 100px;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(202, 181, 127);
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+main {
+  background-image: url(/Images/10026.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+nav ul {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  list-style: none;
+  float: right;
+  display: flex;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeIn 2s forwards;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #4b3d30;
+  font-weight: bold;
+  padding: 8px 10px;
+  border: 1px solid transparent;
+  margin: 15px;
+  border-radius: 5px;
+  background-color: rgb(202, 181, 127);
+  transition: background-color 0.3s;
+  overflow: hidden;
+}
+nav ul li a:hover {
+  background-color: #4b3d30;
+  color: rgb(202, 181, 127);
+}
+
+.parametre {
+  position: relative;
+  margin-right: 160px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+#paramButton {
+  text-decoration: none;
+  color: #4b3d30;
+  font-weight: bold;
+  font-size: 15px;
+  padding: 10px 25px;
+
+  border: 1px solid transparent;
+  margin: 15px;
+  border-radius: 5px;
+  background-color: rgb(202, 181, 127);
+  transition: background-color 0.3s;
+  overflow: hidden;
+}
+
+#paramButton:hover {
+  background-color: #4b3d30;
+  color: rgb(202, 181, 127);
+}
+.sidebar {
+  display: none;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  width: 300px;
+  height: 20vh;
+  background-color: rgb(202, 181, 127);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  z-index: 1000;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  font-size: 18px;
+  color: black;
+  margin: 10px 0;
+}
+.sidebar ul a {
+  text-decoration: none;
+  color: inherit;
+}
+.sidebar ul li:hover {
+  color: white;
+}
+.banniere {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  position: relative;
+  width: 100%;
+  min-height: vh;
+  margin-top: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
+
+.bienvenue {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 36px;
+  color: 4B3D30;
+  height: 5vh;
+  margin-bottom: 20px;
+  background-color: transparent;
+}
+
+.appart {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 28px;
+  color: 4B3D30;
+
+  background-color: transparent;
+  padding-left: 0px;
+  margin-bottom: 100px;
+}
+.humeur {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 28px;
+  text-align: center;
+  color: 4B3D30;
+}
+
+.emoji-list {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+.emoji-item {
+  font-size: 50px;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: box-shadow 0.3s ease;
+}
+
+.emoji-item.shadow {
+  box-shadow: rgba(230, 8, 8, 0.875) -5px 5px,
+    rgba(222, 62, 8, 0.879) -10px 10px, rgba(240, 46, 65, 0.888) -15px 15px,
+    rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+}
+.message {
+  font-family: Georgia, "Times New Roman", Times, serif;
+
+  font-size: 28px;
+
+  color: black;
+  min-height: 40px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  text-align: center;
+}
+.message.show {
+  opacity: 1;
+  visibility: visible;
+}
+.calendar {
+  background-color: beige;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  margin: 20px auto;
+  padding: 10px;
+}
+.semaine {
+  text-align: center;
+  font-size: 24px;
+  color: 4B3D30;
+  margin: 20px auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #432607;
+  text-align: center;
+  padding: 10px;
+  color: white;
+  background-color: rgb(202, 181, 127);
+}
+footer {
+  text-align: right;
+  background-color: rgb(202, 181, 127);
+  padding: 10px;
+  box-shadow: 10px 5px 5px black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.afficher_nom {
+  color: rgba(225, 53, 26, 0.974);
+  opacity: 0;
+  animation: afficher_nom 5s forwards;
+}
+@keyframes afficher_nom {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Media queries pour les appareils mobiles */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px; /* Ajuste la taille de police pour le mobile */
+  }
+
+  header {
+    flex-direction: column; /* Empile les éléments en colonne */
+    align-items: center; /* Centre les éléments */
+    font-size: 18px; /* Réduit la taille de la police */
+  }
+
+  .logo img {
+    height: 80px; /* Réduit la taille du logo */
+  }
+
+  nav ul {
+    flex-direction: column; /* Empile les éléments de navigation */
+    align-items: center; /* Centre les éléments */
+    margin: 0; /* Réinitialise la marge */
+    padding: 0; /* Réinitialise le padding */
+  }
+
+  nav ul li {
+    margin: 10px 0; /* Réduit l'espacement entre les éléments */
+  }
+
+  .parametre {
+    margin-right: 0; /* Réinitialise la marge droite */
+    margin-top: 10px; /* Ajoute un espacement en haut */
+  }
+
+  .sidebar {
+    width: 90%; /* Réduit la largeur du panneau */
+    right: 5%; /* Centre le panneau */
+    top: 60px; /* Ajuste la position selon l'en-tête */
+  }
+
+  .banniere {
+    flex-direction: column; /* Empile les éléments */
+    min-height: 40vh; /* Réduit la hauteur minimale */
+  }
+
+  .bienvenue,
+  .appart {
+    font-size: 24px; /* Réduit la taille de police */
+    text-align: center; /* Centre le texte */
+  }
+
+  .calendar {
+    width: 95%; /* Réduit la largeur du calendrier */
+  }
+
+  .semaine {
+    font-size: 20px; /* Réduit la taille de police */
+  }
+
+  table {
+    font-size: 14px; /* Réduit la taille de police des tables */
+  }
+
+  th,
+  td {
+    padding: 8px; /* Ajuste le padding */
+  }
+
+  footer {
+    font-size: 18px; /* Réduit la taille de la police du footer */
+  }
+}

@@ -1,0 +1,137 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+.logo img {
+  height: 100px;
+  opacity: 0;
+  transform: translateY(-20px); /* Déplace légèrement le logo vers le haut */
+  animation: fadeIn 2s forwards; /* Animation de fondu */
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(202, 181, 127);
+  /* padding: 10px; */
+  /* box-shadow: 10px 5px 5px black; */
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+main {
+  background-image: url(/Images/10026.jpg);
+  background-size: cover; /* Fait en sorte que l'image couvre tout l'élément */
+  background-position: center; /* Centre l'image */
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin: 0;
+  height: 85vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+}
+nav ul {
+  list-style: none;
+  float: right;
+  display: flex;
+  opacity: 0;
+  transform: translateY(-20px); /* Déplace légèrement le logo vers le haut */
+  animation: fadeIn 2s forwards; /* Animation de fondu */
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #4b3d30;
+  font-weight: bold;
+  padding: 8px 10px;
+  border: 1px solid transparent;
+  margin: 15px;
+  border-radius: 5px; /* Coins arrondis */
+  background-color: rgb(202, 181, 127); /* Couleur de fond */
+  transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #4b3d30;
+  color: rgb(202, 181, 127);
+}
+
+.parametre {
+  position: relative;
+  margin-right: 160px;
+}
+
+#paramButton {
+  text-decoration: none;
+  color: #4b3d30;
+  font-weight: bold;
+  font-size: 15px;
+  padding: 10px 25px;
+  /* background-color: #007bff; */
+  border: 1px solid transparent;
+  margin: 15px;
+  border-radius: 5px;
+  background-color: rgb(202, 181, 127);
+  transition: background-color 0.3s;
+  overflow: hidden;
+}
+
+#paramButton:hover {
+  background-color: #4b3d30;
+  color: rgb(202, 181, 127);
+}
+.sidebar {
+  display: none; /* Masquer le panneau par défaut */
+  position: absolute; /* Positionner le panneau par rapport au bouton */
+  top: 50px; /* Ajustez selon la hauteur de votre en-tête */
+  right: 0; /* Positionner le panneau à droite */
+  width: 300px; /* Largeur du panneau */
+  height: 20vh;
+  background-color: rgb(202, 181, 127); /* Couleur de fond du panneau */
+  border: 1px solid #ccc; /* Bordure du panneau */
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Ombre pour le panneau */
+  padding: 15px; /* Espacement intérieur */
+  z-index: 1000; /* S'assurer que le panneau est au-dessus des autres éléments */
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  font-size: 18px;
+  color: black;
+  margin: 10px 0; /* Espacement entre les sections du panneau */
+}
+.sidebar ul a {
+  text-decoration: none; /* Enlève le soulignement */
+  color: inherit; /* Garde la couleur du texte du parent (ici, le logo) */
+}
+.sidebar ul li:hover {
+  color: white;
+}
+footer {
+  position: absolute;
+  bottom: 0; /* Distance du bas */
+  justify-content: right;
+  display: flex;
+  width: 99%;
+  text-align: right;
+  background-color: rgb(202, 181, 127);
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+}

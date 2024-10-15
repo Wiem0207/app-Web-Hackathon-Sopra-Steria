@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_Evenement.css">
+    <script src="config_Evenement.js" defer></script>
+    <title>Document</title>
+</head> 
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="../Acceuil/Acceuil.html"><img src="/Images/Image1.png"></a></li>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../Evenement/Evenement.html">Événements</a></li>
+                <li><a href="../Securite/Securite.html">Sécurité</a></li>
+                <li><a href="../Annonces/Annonces.html">Annonces</a></li>
+            </ul>
+        </nav>
+        <div class="parametre">
+            <button id="paramButton">
+                Plus
+            </button>
+            <div id="sidebar" class="sidebar">
+                <ul>
+                    <li>Paramètres</li>
+                    <li>Compte</li>
+                    <li>Abonnements</li>
+                    <li>
+                        <a href="../login/login.html">deconnexion</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <h2>Ajouter un Événement</h2>
+    <div id="evenementList2"></div>
+    <section class="Ajouter_Evenement">
+        <div class="champIpnut">
+            <form method="get" action="" id="formEvent">
+                <input type="text" name="reponse" id="inputEcriture" placeholder="Ajouter un événement">
+
+                <label for="jourSemaine">Choisir un jour :</label>
+                <select id="jourSemaine" name="jour">
+                    <option value="lundi">Lundi</option>
+                    <option value="mardi">Mardi</option>
+                    <option value="mercredi">Mercredi</option>
+                    <option value="jeudi">Jeudi</option>
+                    <option value="vendredi">Vendredi</option>
+                    <option value="samedi">Samedi</option>
+                    <option value="dimanche">Dimanche</option>
+                </select>
+
+                <label for="heureDebut">Choisir l'heure de début :</label>
+                <input type="time" id="heureDebut" name="heureDebut">
+                <button id="button_Ajouter" type="submit">Ajouter un evenement</button>
+                <!-- Une section où les événements seront affichés -->
+            </form>
+        </div>
+        <section id="evenementDisplay">
+            <h3>Événements Ajoutés</h3>
+            <div id="evenementList">
+                <!-- Les événements ajoutés vont s'afficher ici -->
+            </div>
+        </section>
+    </section>
+
+</body>
+<main>
+    <footer>
+        🌆Immo link@inc
+    </footer>
+</main>
+
+</html>

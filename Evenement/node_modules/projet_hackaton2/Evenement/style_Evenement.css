@@ -1,0 +1,328 @@
+body {
+  background-image: url(/Images/10026.jpg);
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin: 0;
+  margin: 0;
+  padding: 0;
+  height: 96vh;
+  width: 98%;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+.logo img {
+  height: 100px;
+  opacity: 0;
+  transform: translateY(-20px); 
+  animation: fadeIn 2s forwards; 
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 112%;
+  background-color: rgb(202, 181, 127);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+nav ul {
+  list-style: none;
+  float: right;
+  display: flex;
+  opacity: 0;
+  transform: translateY(-20px); 
+  animation: fadeIn 2s forwards; 
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #4b3d30;
+  font-weight: bold;
+  padding: 8px 10px;
+  border: 1px solid transparent;
+  margin: 15px;
+  border-radius: 5px; 
+  background-color: rgb(202, 181, 127);
+  transition: background-color 0.3s;
+  overflow: hidden;
+}
+
+nav ul li a:hover {
+  background-color: #4b3d30;
+  color: rgb(202, 181, 127);
+}
+
+.parametre {
+  position: relative;
+  margin-right: 300px;
+}
+
+#paramButton {
+  text-decoration: none;
+  color: #4b3d30;
+  font-weight: bold;
+  font-size: 15px;
+  padding: 10px 25px;
+  border: 1px solid transparent;
+  margin: 15px;
+  border-radius: 5px;
+  background-color: rgb(202, 181, 127);
+  transition: background-color 0.3s;
+  overflow: hidden;
+}
+
+#paramButton:hover {
+  background-color: #4b3d30;
+  color: rgb(202, 181, 127);
+}
+.sidebar {
+  display: none; 
+  position: absolute; 
+  top: 50px; 
+  right: 0; 
+  width: 300px; 
+  height: 20vh;
+  background-color: rgb(202, 181, 127); 
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+  padding: 15px; 
+  z-index: 1000; 
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  font-size: 18px;
+  color: black;
+  margin: 10px 0; 
+}
+.sidebar ul a {
+  text-decoration: none; 
+  color: inherit; 
+}
+.sidebar ul li:hover {
+  color: white;
+}
+
+h2,
+h3 {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+.Ajouter_Evenement {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto; 
+}
+
+
+.champIpnut {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; 
+}
+
+
+input[type="text"],
+input[type="time"],
+select {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+#button_Ajouter {
+  padding: 12px;
+  background-color: rgb(202, 181, 127);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+#button_Ajouter:hover {
+  background-color: white;
+  color: rgb(202, 181, 127);
+  border: solid;
+  border-radius: 5px;
+  border-color: rgb(202, 181, 127);
+}
+
+
+#evenementDisplay {
+  margin-top: 30px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+#evenementList,
+#evenementList2 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; 
+}
+
+
+#evenementList2 .evenement,
+#evenementList .evenement {
+  background-color: rgb(202, 181, 127);
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+label {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.evenement {
+  background-color: #f9f9f9;
+
+  border: 1px solid #ddd; 
+  border-radius: 8px;
+  margin-left: 2%;
+  padding: 2%;
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  width: 60%;
+}
+
+
+.evenement p {
+  margin: 0;
+  font-size: 16px;
+  color: black;
+}
+.evenement:hover {
+  transform: scale(1.05);
+  background-color: green;
+  opacity: 0.7;
+}
+
+.evenement button {
+  background-color: #e74c3c; 
+  color: white;
+  border: none; 
+  border-radius: 10%; 
+  padding: 10px; 
+  margin-left: 22%;
+  cursor: pointer; 
+  font-size: 18px;
+  text-align: center;
+  transition: background-color 0.3s ease; 
+}
+
+
+.evenement button:hover {
+  background-color: #c0392b; 
+}
+
+
+.evenement {
+  animation: slideIn 0.5s ease;
+}
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+footer {
+  bottom: 0;
+  justify-content: right;
+  display: flex;
+  width: 101%;
+  text-align: right;
+  background-color: rgb(202, 181, 127);
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+@media (max-width: 768px) {
+  header {
+    flex-direction: column; 
+    align-items: flex-start; 
+    padding: 10px; 
+  }
+
+  nav ul {
+    flex-direction: column; 
+    width: 100%; 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+
+  .parametre {
+    margin-right: 0;
+    margin-top: 10px; 
+  }
+
+  .sidebar {
+    width: 90%; 
+    right: 5%; 
+  }
+
+ 
+  input[type="text"],
+  input[type="time"],
+  select {
+    padding: 10px; 
+    font-size: 14px; 
+  }
+
+
+  .evenement {
+    width: 90%; 
+    margin: 0 auto; 
+  }
+
+  footer {
+    font-size: 16px; 
+  }
+}

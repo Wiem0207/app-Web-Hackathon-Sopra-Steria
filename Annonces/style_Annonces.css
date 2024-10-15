@@ -1,0 +1,319 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+.logo img {
+  height: 100px;
+  opacity: 0;
+  transform: translateY(-20px); 
+  animation: fadeIn 2s forwards; 
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(202, 181, 127);
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+main {
+  background-image: url(/Images/10026.jpg);
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin: 0;
+  height: 85vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+}
+nav ul {
+  list-style: none;
+  float: right;
+  display: flex;
+  opacity: 0;
+  transform: translateY(-20px); 
+  animation: fadeIn 2s forwards; 
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #4b3d30;
+  font-weight: bold;
+  padding: 8px 10px;
+  border: 1px solid transparent;
+  margin: 15px;
+  border-radius: 5px; 
+  background-color: rgb(202, 181, 127); 
+  transition: background-color 0.3s;
+}
+nav ul li a:hover {
+  background-color: #4b3d30;
+  color: rgb(202, 181, 127);
+}
+
+.parametre {
+  position: relative;
+  margin-right: 160px;
+}
+
+#paramButton {
+  text-decoration: none;
+  color: #4b3d30;
+  font-weight: bold;
+  font-size: 15px;
+  padding: 10px 25px;
+
+  border: 1px solid transparent;
+  margin: 15px;
+  border-radius: 5px;
+  background-color: rgb(202, 181, 127);
+  transition: background-color 0.3s;
+  overflow: hidden;
+}
+
+#paramButton:hover {
+  background-color: #4b3d30;
+  color: rgb(202, 181, 127);
+}
+.sidebar {
+  display: none; 
+  position: absolute; 
+  top: 50px; 
+  right: 0; 
+  width: 300px; 
+  height: 20vh;
+  background-color: rgb(202, 181, 127); 
+  border: 1px solid #ccc; 
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+  padding: 15px; 
+  z-index: 1000; 
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  font-size: 18px;
+  color: black;
+  margin: 10px 0; /* Espacement entre les sections du panneau */
+}
+.sidebar ul a {
+  text-decoration: none; /* Enlève le soulignement */
+  color: inherit; /* Garde la couleur du texte du parent (ici, le logo) */
+}
+.sidebar ul li:hover {
+  color: white;
+}
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.card {
+  background-color: rgb(202, 181, 127);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 40%;
+  padding: 20px;
+  margin: 5px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+#covoiturage-card:hover {
+  transform: scale(1.05);
+  background-color: green;
+  opacity: 0.5;
+}
+#alertes-card:hover {
+  transform: scale(1.05);
+  background-color: red;
+  opacity: 0.5;
+}
+#infos-card:hover {
+  transform: scale(1.05);
+  background-color: yellow;
+  opacity: 0.5;
+}
+.card-title {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.text-area {
+  display: none;
+  margin-top: 20px;
+  text-align: center;
+}
+
+textarea {
+  width: 80%;
+  height: 100px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  font-size: 16px;
+  resize: none;
+}
+
+#submit-btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: rgb(202, 181, 127);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#submit-btn:hover {
+  background-color: white;
+  color: rgb(202, 181, 127);
+  border: solid;
+  border-radius: 5px;
+  border-color: rgb(202, 181, 127);
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  justify-content: right;
+  display: flex;
+  width: 99%;
+  text-align: right;
+  background-color: rgb(202, 181, 127);
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+
+#evenementList {
+  margin-top: 20px;
+  padding: 10px;
+  width: 80%;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-height: 300px;
+  overflow-y: auto; 
+}
+
+.evenement {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.evenement button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.evenement button:hover {
+  background-color: #c82333;
+}
+
+
+#evenementList:empty::before {
+  content: "Aucune annonce pour le moment.";
+  display: block;
+  text-align: center;
+  color: #777;
+  font-style: italic;
+}
+/* Styles pour les écrans de moins de 600px (téléphones) */
+@media only screen and (max-width: 600px) {
+  header {
+    flex-direction: column; /* Empile les éléments du header */
+    align-items: flex-start; /* Aligne les éléments à gauche */
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Assure que le corps prend toute la hauteur de la fenêtre */
+    margin: 0; /* Enlève les marges par défaut */
+  }
+
+  main {
+    flex: 1; /* Permet au main de prendre tout l'espace restant */
+    padding: 10px; /* Ajoutez un peu de padding si nécessaire */
+    overflow-y: auto; /* Permet le défilement si le contenu est trop long */
+  }
+
+  footer {
+    /* Styles pour le footer */
+    background-color: rgb(202, 181, 127);
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    /* Assurez-vous que le footer est bien positionné */
+    width: 100%;
+  }
+
+  .logo img {
+    height: 80px; /* Ajuste la hauteur du logo */
+  }
+
+  nav ul {
+    flex-direction: column; /* Aligne les éléments du menu verticalement */
+    opacity: 1; /* Rend le menu visible */
+    transform: translateY(0); /* Annule la translation */
+  }
+
+  nav ul li {
+    margin: 10px 0; /* Réduit l'espacement entre les éléments du menu */
+  }
+
+  .card-container {
+    flex-direction: column; /* Empile les cartes */
+    align-items: center; /* Centre les cartes */
+  }
+
+  .card {
+    width: 90%; /* Ajuste la largeur des cartes */
+    margin: 10px 0; /* Réduit l'espacement vertical */
+  }
+
+  .sidebar {
+    width: 90%; /* Ajuste la largeur de la sidebar */
+    right: 5%; /* Centre la sidebar par rapport à l'écran */
+  }
+
+  textarea {
+    width: 90%; /* Ajuste la largeur de la zone de texte */
+  }
+}

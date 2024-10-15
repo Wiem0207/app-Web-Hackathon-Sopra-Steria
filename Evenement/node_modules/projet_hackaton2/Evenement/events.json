@@ -1,0 +1,25 @@
+{
+  "lundi": [],
+  "mardi": [   {
+    "evenement": "Collecte poubelle",
+    "heure": "18:00"
+  }],
+  "mercredi": [{
+    "evenement": "Collecte collis",
+    "heure": "18:00"
+  }],
+  "jeudi": [],
+  "vendredi": [],
+  "samedi": [
+    {
+      "evenement": "jogging Ensemble!",
+      "heure": "09:00"
+    }
+  ],
+  "dimanche": [
+    {
+      "evenement": "Jeux de Société ",
+      "heure": "14:00"
+    }
+  ]
+}
